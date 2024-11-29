@@ -60,52 +60,78 @@ body {
   border: none;
 }
 
-.trending-events {
-  padding: 50px 20px;
-  background-color: #F3F4F6;
+
+
+/* Styling for the container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the container */
+  padding: 20px;
 }
 
-.trending-events .event-cards {
-  display: flex;
-  justify-content: space-between;
+/* Styling for the grid layout */
+.event-cards {
+  display: grid; /* Turns this div into a grid container */
+  grid-template-columns: repeat(4, 1fr); /* Creates 4 equal-width columns */
+  gap: 20px; /* Adds space between the items */
+  padding: 10px;
+  
 }
 
+/* Styling for individual cards inside the grid */
 .event-card {
-  background: white;
-  border-radius: 8px;
+  
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 15px;
-  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .event-card img {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
+  max-height:auto;
+  object-fit: cover;
   border-radius: 8px;
+  margin-bottom: 15px;
 }
 
 .event-card h4 {
-  margin: 15px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-.event-categories {
-  text-align: center;
-  padding: 50px 20px;
+.event-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
 }
 
-.event-categories .categories {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+.event-card a {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
 }
 
-.category {
-  background: #4A148C;
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  flex: 1;
-  margin: 0 10px;
+.event-card a:hover {
+  background-color: #0056b3;
 }
+
+
+
+
 
 .footer {
   background: #4A148C;
@@ -324,3 +350,117 @@ margin-left:20%;
     color: #333;
     font-size: 1.2rem;
 }
+/* Styling for product details */
+#product-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 500px;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1000;
+}
+
+.details-card img {
+  width: 100%;
+  height: auto;
+}
+
+.details-card h2 {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.details-card p {
+  margin: 10px 0;
+}
+
+#close-details {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#close-details:hover {
+  background: #d32f2f;
+}
+
+.single-product{
+text-align: center;
+
+}
+
+
+
+
+
+#product-details-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+
+#product-details-container .details-card img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto 20px auto;
+  border-radius: 8px;
+}
+
+
+#product-details-container .details-card h2 {
+  font-size: 28px;
+  margin: 20px 0 10px 0;
+  color: #333;
+  text-align: center;
+}
+
+
+#product-details-container .details-card p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin: 10px 0;
+  text-align: center;
+}
+
+
+#product-details-container .details-card p strong {
+  font-weight: bold;
+  color: #000;
+}
+
+
+#product-details-container .details-card .back-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+
+#product-details-container .details-card .back-link:hover {
+  background-color: #0056b3;
+}
+
+
+

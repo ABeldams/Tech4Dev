@@ -1,5 +1,5 @@
 
-import ProductService from './Product.js'
+import {ProductService,Product} from './Product.js'
 
 
 const fetchData=async () => {
